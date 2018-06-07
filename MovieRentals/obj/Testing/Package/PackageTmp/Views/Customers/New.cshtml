@@ -1,0 +1,40 @@
+﻿@model MovieRentals.ViewModel.NewCustomerViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    @Model.Title
+</h2>
+
+@using (Html.BeginForm("Save", "Customers"))
+{
+    @Html.ValidationSummary()
+    <div class="form-group">
+        @Html.LabelFor(x => x.Customers.Name)
+        @Html.TextBoxFor(x => x.Customers.Name, new { @class = "form-control"})
+        @Html.ValidationMessageFor(x => x.Customers.Name)
+    </div>       
+    <div class="form-group">
+        @Html.LabelFor(x => x.Customers.MembershipTypeId)
+        @Html.DropDownListFor(x => x.Customers.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type",new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Customers.MembershipTypeId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Customers.Birthdate)
+        @Html.TextBoxFor(x => x.Customers.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Customers.Birthdate)
+    </div>
+    <div class="checkbox">
+        @Html.CheckBoxFor(x => x.Customers.IsSubscribedToNewsLetter, new { @class = "checkbox" })  Subscribed to Newsletter?
+    </div>
+    @Html.HiddenFor(x => x.Customers.Id)
+    @Html.AntiForgeryToken()
+    <button typepe="submit" class="btn btn-primary" style="margin-top:10px">Save</button>
+}
+@section scripts
+{
+   @Scripts.Render("~/bundles/jqueryval")    
+}
+

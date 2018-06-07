@@ -1,0 +1,43 @@
+﻿@model MovieRentals.ViewModel.NewMovieViewModel
+@{
+    ViewBag.Title = "NewMove";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+@Model.Title
+    </h2>
+
+@using (Html.BeginForm("Save", "Movies"))
+{
+    @Html.ValidationSummary(true, "The following fields are required.")
+    <div class="form-group">
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.ReleaseDate)
+        @Html.TextBoxFor(x => x.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ReleaseDate)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.GenreTypeId)
+        @Html.DropDownListFor(x => x.GenreTypeId, new SelectList(Model.GenreTypes, "Id", "Name"), "Select Genre Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.GenreTypeId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.NoInStock)
+        @Html.TextBoxFor(x => x.NoInStock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.NoInStock)
+    </div>
+    @Html.HiddenFor(x => x.Id)
+    @Html.AntiForgeryToken()   
+    <button typepe="submit" class="btn btn-primary" style="margin-top:10px">Save</button>
+
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
