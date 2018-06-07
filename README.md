@@ -25,4 +25,4 @@ Twitter Typeahead
 ##################################################################################
 
 Description:-
-This app is able to register new customers by creating an account or they can simply log in via Facebook.
+This app is able to register new customers by creating an account or they can simply log in via Facebook.(In this project to enable facebook feature, you need to add your FacebookAppId and FacebookSecurityCode in /MovieRentals/AppSettings.xml)
