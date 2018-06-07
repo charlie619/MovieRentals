@@ -12,8 +12,8 @@ Movies Rental app was developed using all the basics of MVC Architecture such as
 
 C# Advanced,
 Entity Framework 6.1.3 (Code - First type),
-Linq - To Use CRUD Operations.
-RestFull Web Services API
+Linq - To Use CRUD Operations,
+RestFull Web Services API,
 Postman to test the Apis
 
 ----For Frontend------
