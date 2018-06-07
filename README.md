@@ -1,5 +1,5 @@
 # MovieRentals
-This App is designed on basic requirements of Movie Rental Store.
+This App is designed according to basic requirements of Movie Rental Store.
 Developed on Visual Studio 2015 using ASP.Net MVC 5 technology.
 
 #################################################################################
