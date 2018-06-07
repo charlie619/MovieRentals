@@ -7,6 +7,7 @@ Developed on Visual Studio 2015 using ASP.Net MVC 5 technology.
 Movies Rental app was developed using all the basics of MVC Architecture such as,
 
 ----For Backend------
+
 C# Advanced,
 Entity Framework 6.1.3 (Code - First type),
 Linq - To Use CRUD Operations.
