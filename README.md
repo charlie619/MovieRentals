@@ -21,8 +21,13 @@ CSS,
 JavaScript,
 JQuery,
 Bootstrap 4,
-Twitter Typeahead
+Twitter Typeahead (Interesting feature)
 ##################################################################################
 
 Description:-
-This app is able to register new customers by creating an account or they can simply log in via Facebook.(In this project to enable facebook feature, you need to add your FacebookAppId and FacebookSecurityCode in /MovieRentals/AppSettings.xml)
+This app is able to register new customers by entering their email Id, password and driving license no or they can simply log in via Facebook. If a customer login via facebook then they have to specify driving license no. (In this project to enable facebook feature, you need to add your FacebookAppId and FacebookSecurityCode in /MovieRentals/AppSettings.config)
+
+In this App, there is only one Admin user who can add, modify or delete customers as well as movies.
+Customers can see movies details like available no in stock and can rent that movie.
+
+
